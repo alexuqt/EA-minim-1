@@ -7,29 +7,37 @@ ul {
     background-color: #edf2f4;
   }
   
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    font-size: 20px;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  a{
-    color: #2b2d42;
-  }
+li {
+  float: left;
+}
 
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #8d99ae;
-    color: #edf2f4;
-  }
-  
-  .active {
-    background-color: #2b2d42;
-    color: #edf2f4;
-  }
+.minim {
+  float: right;
+  font-size: 20px;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #8d99ae;
+}
+
+li a {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a{
+  color: #2b2d42;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #8d99ae;
+  color: #edf2f4;
+}
+
+.active {
+  background-color: #2b2d42;
+  color: #edf2f4;
+}
