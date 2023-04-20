@@ -1,0 +1,53 @@
+<app-navigation></app-navigation>
+<h2>Locations list</h2>
+
+<div class="container">
+  <table class="loc-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Population</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Acts</th>
+        <th>
+          <button class="btn-add" (click)="addLocation()">Add location</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let location of locations">
+        <td>{{ location.name }}</td>
+        <td>{{ location.city }}</td>
+        <td>{{ location.population }}</td>
+        <td>{{ location.latitude }}</td>
+        <td>{{ location.longitude }}</td>
+        <ul>
+          <li *ngFor="let actId of location.acts">
+              {{ actId }}
+          </li>
+        </ul>            
+        <td>
+          <button class="btn edit-btn" (click)="editLocation(location)">
+            <i class="fas fa-edit"></i> Edit
+          </button>
+          <button class="btn delete-btn" (click)="confirmDelete(location)">
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="7">
+          <div class="pagination">
+            <button class="paginate-btn" [disabled]="currentPage === 1" (click)="prevPage()"><</button>
+            <span>{{ currentPage }}/{{ totalPages }}</span>
+            <button class="paginate-btn" [disabled]="currentPage === totalPages" (click)="nextPage()">></button>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

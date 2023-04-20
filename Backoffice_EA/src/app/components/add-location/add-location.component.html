@@ -1,0 +1,26 @@
+<app-navigation></app-navigation>
+<h1>Add Location</h1>
+
+<form [formGroup]="form">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" formControlName="name" required>
+  </div>
+  <div>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" formControlName="city" required>
+  </div>
+  <div>
+    <label for="population">Population:</label>
+    <input type="number" id="population" name="population" formControlName="population" required>
+  </div>
+  <div>
+    <label for="latitude">Latitude:</label>
+    <input type="number" id="latitude" name="latitude" formControlName="latitude" required>
+  </div>
+  <div>
+    <label for="longitude">Longitude:</label>
+    <input type="number" id="longitude" name="longitude" formControlName="longitude" required>
+  </div>
+  <button type="submit" (click)="addLocation()">Add</button>
+</form>
